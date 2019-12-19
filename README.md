@@ -34,3 +34,7 @@ As you can see, index numbers can be entered in any order as long as they are se
 
 ## Common Errors
 * Entering anything other than numbers separted by commas in the textbox wtih a black border will result in an error. To fix this, please remove anything other than a combination of numeric values that are listed under `<-- Columns within this CSV File -->` separated by commas. (See the [example scenario](https://github.com/mike-weiner/csv_report_generator/tree/master#exampel-scenario) for further explanation and examples.) 
+
+## Image Assets
+Below is a screenshot of that this script's GUI looks like before opening a CSV to read data from. 
+![Alt text](screenshot1.png?raw=true "CSV Report Generator GUI")
