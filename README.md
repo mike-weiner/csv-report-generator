@@ -21,4 +21,4 @@ Do you deal with large CSV files where you often only need certain columns of da
 
 ## Image Assets
 Below is a screenshot of that this script's GUI looks like before opening a CSV to read data from. 
-![Alt text](screenshot1.png?raw=true "CSV Report Generator GUI")
+![Alt text](screenshot.png?raw=true "CSV Report Generator GUI")
