@@ -22,5 +22,9 @@ Do you deal with large CSV files where you often only need certain columns of da
 ## Image Assets
 Below is a screenshot of what this script's GUI looks like when selecting columns of data to be included in the new CSV file. 
 <p align="center">
+<<<<<<< HEAD
   <img width="343" height="748" src="/gui-overview-v3.png">
+=======
+  <img src="/gui-overview-v2.png">
+>>>>>>> 7270a77d38eb449688298d7511a89aa27f72ce57
 </p>
