@@ -129,11 +129,11 @@ csv_columns_label.grid(row = 6, column = 0, columnspan = 2, sticky='nesw', pady 
 
 # Establish Listbox to allow user to select desired CSV columns for output report
 csv_col_select_listbox = Listbox(builder_win, selectmode = MULTIPLE, exportselection = 0)
-csv_col_select_listbox.grid(row = 7, column = 0, sticky='nesw', padx = (15,0), pady = (0,0))
+csv_col_select_listbox.grid(row = 7, column = 0, sticky='nesw', padx = (25,0), pady = (0,0))
 
 # Establish Scroll Bar to allow user to Scroll Through List of CSV Column Headers
 csv_col_select_scrollbar = Scrollbar(builder_win)
-csv_col_select_scrollbar.grid(row = 7, column = 1, sticky='ns', padx = (0,15))
+csv_col_select_scrollbar.grid(row = 7, column = 1, sticky='ns', padx = (0,10))
 
 # Link Scroll Bar to List Box for CSV Columns
 csv_col_select_listbox.config(yscrollcommand = csv_col_select_scrollbar.set)
