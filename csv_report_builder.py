@@ -121,10 +121,10 @@ generate_report_label.grid(row = 4, column = 0, columnspan=2, sticky='nesw', pad
 
 # Create label to display CSV headers
 csv_columns_label = tk.Label(builder_win, text="Columns within CSV File", font="-weight bold", padx = 15)
-csv_columns_label.grid(row = 5, column = 0, columnspan = 2, sticky='nesw', pady = (15,0))
+csv_columns_label.grid(row = 5, column = 0, columnspan = 2, sticky='nesw', pady = (5,0))
 
 # Create label to instruct users about how to select CSV headers
-csv_columns_label = tk.Label(builder_win, text="Select/deselect CSV columns to include in the new report by clicking on the titles below. Click the `Generate Report` button below to create the new CSV file with the selected columns.", wraplength = 200, padx = 15)
+csv_columns_label = tk.Label(builder_win, text="Select/deselect the CSV column names in the list below to include/exclude them in the new CSV file. Click the Generate Report button below to create the new CSV file with the selected data columns.", wraplength = 200, padx = 15)
 csv_columns_label.grid(row = 6, column = 0, columnspan = 2, sticky='nesw', pady = (0, 10))
 
 # Establish Listbox to allow user to select desired CSV columns for output report
