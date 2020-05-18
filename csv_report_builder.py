@@ -34,6 +34,9 @@ def select_file():
             csv_file_reader = csv.reader(csv_file)
             data = [row for row in csv_file_reader]
 
+        # Clear Any Items from List Box
+        csv_col_select_listbox.delete(0, END)
+
         # Add all of the differnet headers in the CSV file to the label for the user to see
         for index, col in enumerate(data[0]):
             csv_col_select_listbox.insert(index, col)
@@ -118,15 +121,23 @@ generate_report_label.grid(row = 4, column = 0, columnspan=2, sticky='nesw', pad
 
 # Create label to display CSV headers
 csv_columns_label = tk.Label(builder_win, text="Columns within CSV File", font="-weight bold", padx = 15)
-csv_columns_label.grid(row = 5, column = 0, sticky='nesw', pady = (15,0))
+csv_columns_label.grid(row = 5, column = 0, columnspan = 2, sticky='nesw', pady = (15,0))
 
 # Create label to instruct users about how to select CSV headers
 csv_columns_label = tk.Label(builder_win, text="Select/deselect CSV columns to include in the new report by clicking on the titles below. Click the `Generate Report` button below to create the new CSV file with the selected columns.", wraplength = 200, padx = 15)
-csv_columns_label.grid(row = 6, column = 0, sticky='nesw', pady = (0, 10))
+csv_columns_label.grid(row = 6, column = 0, columnspan = 2, sticky='nesw', pady = (0, 10))
 
 # Establish Listbox to allow user to select desired CSV columns for output report
-csv_col_select_listbox = Listbox(builder_win, selectmode = MULTIPLE, exportselection = 0, width = 0, height = 0)
-csv_col_select_listbox.grid(row = 7, column = 0, sticky='nesw', padx = 15, pady = (0,15))
+csv_col_select_listbox = Listbox(builder_win, selectmode = MULTIPLE, exportselection = 0)
+csv_col_select_listbox.grid(row = 7, column = 0, sticky='nesw', padx = (15,0), pady = (0,0))
+
+# Establish Scroll Bar to allow user to Scroll Through List of CSV Column Headers
+csv_col_select_scrollbar = Scrollbar(builder_win)
+csv_col_select_scrollbar.grid(row = 7, column = 1, sticky='ns', padx = (0,15))
+
+# Link Scroll Bar to List Box for CSV Columns
+csv_col_select_listbox.config(yscrollcommand = csv_col_select_scrollbar.set)
+csv_col_select_scrollbar.config(command = csv_col_select_listbox.yview)
 
 # Create label for generating report section
 generate_report_label = tk.Label(builder_win, text = "4. Generate New CSV", bg="#5a5a5a", fg="#ffffff", font="-weight bold", padx = 15)
