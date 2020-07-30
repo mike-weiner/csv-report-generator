@@ -1,4 +1,4 @@
-# csv_report_generator
+# csv-report-generator
 Generate a new, custom CSV file with data that you select from every row within an existing CSV file. 
 
 ## About this Python Script
