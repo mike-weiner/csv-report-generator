@@ -11,10 +11,10 @@ Do you deal with large CSV files where you often only need certain columns of da
 ## How to Use this Script
 1. Open your machine's terminal or command prompt and navigate to the directory where you have stored this script. 
 1. Within the directory, place the CSV you would like to pull data from.
-1. Run the command `python3 csv_report_builder.py [Filename of Original CSV] [Column Names (Separated By Column)]`
+1. Run the command `python3 csv_report_builder.py [Filename of Original CSV] [Column Names (Separated By Comma)]`
 
 * Note: `[Filename of Original CSV]` is the full name of a CSV file such as: `trees.csv`
-* Note: `[Column Names (Separated By Column)]` is a list of the column names you would like in your new CSV file (order matters). (i.e. `name,index,date`)
+* Note: `[Column Names (Separated By Comma)]` is a list of the column names you would like in your new CSV file (order matters). (i.e. `name,index,date`)
 
 # Example 
 For example, assume I have a CSV file titled `trees.csv` in the same directory that I have the `csv_report_builder.py` script. The `trees.csv` file has the headers:
