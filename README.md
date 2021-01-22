@@ -17,14 +17,14 @@ Do you deal with large CSV files where you often only need certain columns of da
 * Note: `[Column Names (Separated By Comma)]` is a list of the column names you would like in your new CSV file (order matters). (i.e. `name,index,date`)
 
 # Example 
-For example, assume I have a CSV file titled `trees.csv` in the same directory that I have the `csv_report_builder.py` script. The `trees.csv` file has the headers:
+For example, assume I have a CSV file titled `trees.csv` in the same directory that I have the `csv_report_builder.py` script in. The `trees.csv` file has the following column names in the header row:
 
 | Index | "Girth (in)"| "Height (ft)" | "Volume(ft^3)" |
 | ----- | ----------- | ------------- | -------------- |
 
-I want a new CSV file with the only these headers in this order:
+I want a new CSV file with the only these columns in this order:
 
 | "Volume(ft^3)" | "Girth (in)" | Index |
 | -------------- | ------------ | ----- |
 
-I would run the command `python3 csv_report_builder.py trees.csv "Volume(ft^3)","Girth (in)",Index`. This will create a new file in the same directory with the specified columns in the specified order.
+To accomplish this, I would run the command `python3 csv_report_builder.py trees.csv "Volume(ft^3)","Girth (in)",Index`. This will create a new file in the same directory with the specified columns in the specified order.
