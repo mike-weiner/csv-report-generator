@@ -40,7 +40,7 @@ list_of_colnames_to_output = COLNAMES.split(",")
 string_to_write_to_file = ''
 
 # Open original CSV file passed in by the user
-with open(CURRENTWORKINGDIR + '/' + FILENAME) as csv_file:
+with open(CURRENTWORKINGDIR + '/' + FILENAME, encoding='utf-8-sig') as csv_file:
     csv_file_reader = csv.reader(csv_file)
     data = [row for row in csv_file_reader]
 
